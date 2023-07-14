@@ -1,4 +1,4 @@
-// temporary오하 함수 반환값
+// temporary와 함수 반환값
 #include <iostream>
 
 class Point
@@ -8,6 +8,7 @@ public:
 
     Point(int x, int y) : x(x), y(y) { std::cout << "Point(int, int)" << std::endl; }
     ~Point() { std::cout << "~Point()" << std::endl; }
+    void print() { std::cout << "x value: " << x << std::endl; }
 };
 
 //------------------------
@@ -33,6 +34,8 @@ int main(){
     // 반환된 복사본은 임시객체(temporary)이므로 rvaule가 될 수 없음
     // f3().x = 10;
     // 임시객체가 아니므로 rvalue가 될 수 있음
+    f4().print();    
     f4().x = 10;
+    f4().print();
     return 0;
 }

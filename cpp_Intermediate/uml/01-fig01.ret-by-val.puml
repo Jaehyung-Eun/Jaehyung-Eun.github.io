@@ -1,0 +1,14 @@
+@startuml Return by value example
+
+left to right direction
+
+rectangle c
+rectangle "c<sub>1</sub> = copy of c" as c1
+rectangle "c<sub>2</sub> = copy of c<sub>1</sub>" as c2
+rectangle "c<sub>3</sub> = copy of c<sub>2</sub>" as c3
+
+c --> c1 : c1.count = 1
+c1 --> c2 : c2.count = 2
+c2 --> c3 : c3.count = 3
+
+@enduml
